@@ -4,7 +4,7 @@ RUN mkdir -p /app
 COPY api.py /app/
 COPY requirements.txt /app/
 COPY marina /app/
-RUN pip3 install -r /app/requirements.txt
+RUN python3 -m pip install --no-cache-dir -r /app/requirements.txt
 WORKDIR /app
 RUN chmod +x /app/marina
 EXPOSE 5000
