@@ -5,7 +5,7 @@ RUN git clone https://github.com/hei-school/marina.git /app/marina
 WORKDIR /app/marina
 RUN make
 COPY api.py /app/
-RUN pip3 install flask
+RUN pip3 install -r requirements.txt
 WORKDIR /app
 EXPOSE 5000
 CMD ["python3", "api.py"]
